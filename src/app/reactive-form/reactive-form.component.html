@@ -1,0 +1,31 @@
+<form [formGroup]="checkoutForm"(ngSubmit)="postData()">
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Email</label>
+      <div class="form-group">
+        <input type="text" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+      <!-- <span class="text-muted" *ngIf="checkoutForm.get('email').hasError('required') && checkoutForm.get('email').touched">Email is required</span> -->
+    </div>
+    </div>
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" formControlName="passwo">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">Checkbox</div>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1"formControlName="checkIn">
+          <label class="form-check-label" for="gridCheck1">
+            Example checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary"[disabled]="!checkoutForm.valid">Sign in</button>
+      </div>
+    </div>
+  </form>

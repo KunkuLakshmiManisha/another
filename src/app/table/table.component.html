@@ -1,0 +1,15 @@
+<form #signin="ngForm"(ngSubmit)="loginUser(signin)">
+    <div class="form-group">
+      <label>FullName</label>
+      <input type="text" class="form-control" name="emailAddress"ngModel>
+    </div>
+    <div class="form-group">
+        <label>Email </label>
+        <input type="email" class="form-control" name="emailAddress"ngModel>
+    </div>
+    <div class="form-group">
+      <label>Adress</label>
+      <input type="text" class="form-control" name="emailAddress"ngModel>
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
